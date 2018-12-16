@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_style_match_parent"
+    android:background="@drawable/shape_no_border_corners_five_all_ffffff"
+    >
+
+    <TextView
+        android:id="@+id/tv_report_title"
+        style="@style/base_style_width_match_height_wrap"
+        android:background="@drawable/shape_no_border_top_left_right_corners_five_e1e1e1"
+        android:gravity="center"
+        android:padding="@dimen/common_padding_ten"
+        android:text="@string/report_title"
+        android:textColor="@color/common_color_black"
+        android:textSize="@dimen/common_text_sixteenSize"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_bmi_result"
+        style="@style/base_style_width_match_height_wrap"
+        android:layout_marginTop="@dimen/common_margin_twenty"
+        android:gravity="center_horizontal"
+        android:textColor="@color/common_color_black"
+        android:textSize="@dimen/common_text_sixteenSize"
+        app:layout_constraintTop_toBottomOf="@+id/tv_report_title"
+        tools:text="你的BMI值是20.66\n身材很棒"
+        />
+
+    <TextView
+        android:id="@+id/tv_dialog_center"
+        style="@style/base_style_width_match_height_wrap"
+        android:layout_marginTop="@dimen/common_margin_twenty"
+        android:background="@drawable/shape_no_border_bottom_left_right_corners_five_e1e1e1"
+        android:gravity="center"
+        android:padding="@dimen/common_padding_ten"
+        android:text="@string/ok_label"
+        android:textColor="@color/common_color_black"
+        android:textSize="@dimen/common_text_sixteenSize"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bmi_result"
+        />
+</android.support.constraint.ConstraintLayout>

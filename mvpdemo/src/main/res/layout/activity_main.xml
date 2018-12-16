@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/base_style_match_parent"
+    android:background="@color/common_color_f2f2f2"
+    android:padding="@dimen/common_padding_ten"
+    tools:context=".ui.activity.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_height"
+        style="@style/base_style_wrap_content"
+        android:layout_marginBottom="@dimen/common_margin_three"
+        android:layout_marginLeft="@dimen/common_margin_four"
+        android:layout_marginTop="@dimen/common_margin_ten"
+        android:text="@string/height"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <EditText
+        android:id="@+id/et_height"
+        style="@style/base_width_match_height_50"
+        android:background="@drawable/shape_border_all"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_height"
+        android:inputType="number"
+        android:paddingLeft="@dimen/common_padding_three"
+        app:layout_constraintTop_toBottomOf="@+id/tv_height"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_weight"
+        style="@style/base_style_width_match_height_wrap"
+        android:layout_marginBottom="@dimen/common_margin_three"
+        android:layout_marginLeft="@dimen/common_margin_four"
+        android:layout_marginTop="@dimen/common_margin_twenty"
+        android:text="@string/weight"
+        android:textColor="@color/common_color_black"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_height"/>
+
+    <EditText
+        android:id="@+id/et_weight"
+        style="@style/base_width_match_height_50"
+        android:background="@drawable/shape_border_all"
+        android:hint="@string/hint_weight"
+        android:inputType="number"
+        android:paddingLeft="@dimen/common_padding_three"
+        android:textColor="@color/common_color_black"
+        app:layout_constraintTop_toBottomOf="@+id/tv_weight"
+        />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_padding_ten"
+        android:paddingBottom="@dimen/common_padding_ten"
+        style="?android:borderlessButtonStyle"
+        android:layout_marginTop="@dimen/common_margin_fifty"
+        android:background="@drawable/selector_btn_bg"
+        android:gravity="center"
+        android:text="@string/bmi_btn"
+        android:textColor="@color/common_color_black"
+        android:textSize="@dimen/common_text_twenty"
+        app:layout_constraintTop_toBottomOf="@+id/et_weight"
+        />
+
+</android.support.constraint.ConstraintLayout>

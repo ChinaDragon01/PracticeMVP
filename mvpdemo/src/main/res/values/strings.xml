@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MVPDemo</string>
+    <string name="height">身高(cm)</string>
+    <string name="hint_height">请输入身高(cm)</string>
+    <string name="weight">体重(kg)</string>
+    <string name="hint_weight">请输入体重(kg)</string>
+    <string name="bmi_btn">计算  BMI 值</string>
+    <string name="bmi_result">你的 BMI 值是 </string>
+    <string name="advice_light">你该多吃点</string>
+    <string name="advice_average">体型很棒喔</string>
+    <string name="advice_heavy">你该节食了</string>
+    <string name="about_bmi">关于BMI</string>
+    <string name="ok_label">确定</string>
+    <string name="ok_uri">http://baike.baidu.com/view/966047.htm?fr=aladdin</string>
+    <string name="report_title">BMI 报告</string>
+    <string name="no_net">当前没有网络可用</string>
+    <string name="finish">退出</string>
+    <string name="key_back_tip">再按一次返回键！</string>
+
+</resources>

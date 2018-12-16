@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_fifty">50dp</dimen>
+    <dimen name="common_radius_five">5dp</dimen>
+    <dimen name="common_line_width_03">0.3dp</dimen>
+    <dimen name="common_padding_ten">10dp</dimen>
+    <dimen name="common_padding_three">3dp</dimen>
+    <dimen name="common_text_twenty">20sp</dimen>
+    <dimen name="common_margin_three">3dp</dimen>
+    <dimen name="common_margin_four">4dp</dimen>
+    <dimen name="common_margin_five">5dp</dimen>
+    <dimen name="common_margin_ten">10dp</dimen>
+    <dimen name="common_margin_fifteen">15dp</dimen>
+    <dimen name="common_margin_twenty">20dp</dimen>
+    <dimen name="common_margin_thrity">30dp</dimen>
+    <dimen name="common_margin_fourty">40dp</dimen>
+    <dimen name="common_margin_fifty">50dp</dimen>
+</resources>
