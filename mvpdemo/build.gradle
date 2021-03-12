@@ -1,4 +1,7 @@
+import java.text.SimpleDateFormat
+
 apply plugin: 'com.android.application'
+apply plugin: 'AndResGuard'
 
 android {
     compileSdkVersion 28
@@ -19,9 +22,19 @@ android {
 
     }
 
+    signingConfigs {
+        release {
+            keyAlias 'practicemvp'
+            keyPassword '123456sa'
+            storeFile file('../practicemvp.jks')
+            storePassword '123456sa'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -31,7 +44,76 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "BMI_${variant.versionName}-${releaseTime()}_${variant.buildType.name}.apk"
+        }
+    }
+
 }
+
+def releaseTime() {
+    def df = new SimpleDateFormat("MMddHHmm", Locale.getDefault());
+    def str = df.format(new Date())
+    return Integer.parseInt(str)
+}
+
+
+
+andResGuard {
+    // mappingFile = file("./resource_mapping.txt")
+    mappingFile = null
+    use7zip = true
+    useSign = true
+    // 打开这个开关，会keep住所有资源的原始路径，只混淆资源的名字
+    keepRoot = false
+    // 设置这个值，会把arsc name列混淆成相同的名字，减少string常量池的大小
+    fixedResName = "arg"
+    // 打开这个开关会合并所有哈希值相同的资源，但请不要过度依赖这个功能去除去冗余资源
+    mergeDuplicatedRes = true
+    whiteList = [
+
+    ]
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.20'
+        //path = "/usr/local/bin/7za"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
